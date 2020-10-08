@@ -1,0 +1,133 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+body{
+	background-image: url(https://cdn.seovx.com/?mom=302);
+}
+.main{
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	/*transform: translate(-50%,-50%);*/
+	transform: translate(-50%);
+}
+.sign-frame{
+	height: auto;
+	width: 500px;
+	border: 2px solid #777;
+	color: #fff;
+	-webkit-text-stroke: 0.03em #000;
+	/*background-color: #fff5;*/
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+.hitokoto_sign{
+	font-size: 24px;
+	text-decoration: none;
+	color: #fff;
+	-webkit-text-stroke: 0.03em #000;
+	font-weight: bolder;
+	/*background-image: url(background.jpg);*/
+	/*background-size: contain;*/
+	/*-webkit-text-fill-color: transparent;*/
+	/*-webkit-background-clip: text;*/
+}
+.hitokoto_from{
+	font-size: 20px;
+}
+.input-hex,
+.input-dec{
+	height: 35px;
+	/*width: 200px;*/
+	width: 70%;
+	max-width: 300px;
+	outline-style: none;
+	/*appearance: none;*/
+	letter-spacing: 0.05em;
+	border: 0px;
+	font-size: 18px;
+	color: #000;
+	padding: 0px 20px;
+	border-radius: 20px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px; 
+	background: rgba(52, 61, 70, 0.2);
+}
+.input-hex::-webkit-input-placeholder,
+.input-dec::-webkit-input-placeholder{
+	color: #fffd;
+}
+.input-hex:focus,
+.input-dec:focus{
+	box-shadow: inset 0 3px 3px rgba(0,0,0,.075),0 0 8px rgba(2, 128, 203,.6);
+}
+.color{
+	display: inline-block;
+	height: 35px;
+	width: 30%;
+	max-width: 80px;
+	background: #172A3977;
+	line-height: 35px;
+	color: #fff; 
+	text-align: center;
+	vertical-align: top;
+	margin-left: -4.8px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	cursor: pointer;
+}
+.translate-hex2dec,
+.translate-dec2hex{
+	height: 35px;
+	width: 80px;
+	background-color: #00aaff;
+	border-radius: 20px;
+	/*outline-style: none;*/
+	margin: 0px 10px;
+	font-size: 16px;
+	font-weight: bolder;
+}
+.opacitybtn{
+	height: 35px;
+	width: 120px;
+	background-color: #00aaff;
+	border-radius: 20px;
+	/*outline-style: none;*/
+	margin: 0px 10px;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+
+.opacity{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+.opacity tr{
+	height: 40px;
+}
+.legend{
+	background-image: url(bg.png);
+	background-size: 100% 100%;
+	color: #fff;
+}
+.legend-color{
+	display: inline-block;
+	background-color: #000000;
+	color: #fff;
+	height: 40px;
+	width: 123px;
+	line-height: 40px;
+}
+.legend-color2{
+	display: inline-block;
+	background-color: #000000;
+	color: #123456;
+	height: 40px;
+	width: 123px;
+	line-height: 40px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>在线进制转换Numeration System</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="在线工具,颜色转换,进制转换">
+	<meta name="description" content="十六进制颜色和十进制颜色相互转换;二进制是Binary,简写为B;八进制是Octal,简写为O或Q;十进制为Decimal,简写为D;十六进制为Hexadecimal,简写为H">
+	<link rel="icon" type="image/png" sizes="70x70" href="favicon.png">
+	<!-- <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"> -->
+	<link rel="stylesheet" type="text/css" href="NumerationSystem.css"> 
+	<script type="text/javascript" src="jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="NumerationSystem.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<div class="sign-frame">
+				<table border="0">
+					<tr>
+						<td>	
+							<a href="https://v1.hitokoto.cn/" target="_blank" class="hitokoto_sign">一言语录调用失败！</a>
+						</td>
+					</tr>
+				</table>
+				<table border="0">
+					<tr>
+						<td align="right" width="500px">——『
+							<span class="hitokoto_from">一言语录调用失败！</span>』
+						</td>
+					</tr>
+				</table>
+			</div>
+			<table border="0" style="background-color:#fff7;margin-top:20px;text-align: center;">
+				<tr>
+					<td> </td>
+					<th><font size="5">颜色进制转换</font></th>
+					<td width="160px">RGB(A)</td>
+				</tr>
+				<tr height="40px">
+					<td width="120px" align="right">
+						<label for="input-hex">十六进制</label>
+					</td>
+					<td width="400px">
+						<input class="input-hex" type="search" name="hex" placeholder="如:ff00aaff" value="" onkeyup="value=value.replace(/[^a-fA-F0-9]/ig,'')">
+						<!-- value=value.replace(/[^\w\.\/]/ig,'') -->
+						<div class="color"><span class="preview1">预览</span></div>
+					</td>
+					<td><span class="rgb1">(NaN,NaN,NaN)</span></td>
+				</tr>
+				<tr height="40px">
+					<td></td>
+					<td colspan="1">
+						<div class="translate">
+							<button class="translate-hex2dec">16转10 ⇩</button>
+							<!-- ☟⇩ -->
+							<button class="translate-dec2hex">10转16 ⇧</button>
+							<!-- ☝⇧ -->
+						</div>
+					</td>
+					<td><button class="opacitybtn">透明度对照表</button></td>
+				</tr>
+				<tr height="40px">
+					<td align="right">
+						<label for="input-dec">十进制</label>
+					</td>
+					<td>
+						<input class="input-dec" type="search" name="decimal" placeholder="如:4294967295" value="" onkeyup="value=value.replace(/[^0-9]/ig,'')">
+						<div class="color"><span class="preview2">预览</span></div>
+					</td>
+					<td><span class="rgb2">(NaN,NaN,NaN)</span></td>
+				</tr>
+			</table>
+			<table border="0" class="opacity" style="display:none;background-color:#fff7;margin:20px 0;text-align:center;">
+				<th colspan="4"><font size="5">透明度对照表</font></th>
+				<tr>
+					<th width="80px">百分比</th>
+					<th width="80px">16进制</th>
+					<th width="80px">Opacity</th>
+					<th width="80px">图示</th>
+				</tr>
+				<tr>
+					<td>0%</td><td>FF</td><td>1</td>
+					<td class="legend"><span class="legend-color" style="background:#123456FF">#FF</span></td>
+				</tr>
+				<tr>
+					<td>5%</td><td>F2</td><td>0.95</td>
+					<td class="legend"><span class="legend-color" style="background:#123456F2">#F2</span></td>
+				</tr>
+				<tr>
+					<td>10%</td><td>E5</td><td>0.90</td>
+					<td class="legend"><span class="legend-color" style="background:#123456E5">#E5</span></td>
+				</tr>
+				<tr>
+					<td>15%</td><td>D8</td><td>0.85</td>
+					<td class="legend"><span class="legend-color" style="background:#123456D8">#D8</span></td>
+				</tr>
+				<tr>
+					<td>20%</td><td>CC</td><td>0.80</td>
+					<td class="legend"><span class="legend-color" style="background:#123456CC">#CC</span></td>
+				</tr>
+				<tr>
+					<td>25%</td><td>BF</td><td>0.75</td>
+					<td class="legend"><span class="legend-color" style="background:#123456BF">#BF</span></td>
+				</tr>
+				<tr>
+					<td>30%</td><td>B2</td><td>0.70</td>
+					<td class="legend"><span class="legend-color" style="background:#123456B2">#B2</span></td>
+				</tr>
+				<tr>
+					<td>35%</td><td>A5</td><td>0.65</td>
+					<td class="legend"><span class="legend-color" style="background:#123456A5">#A5</span></td>
+				</tr>
+				<tr>
+					<td>40%</td><td>99</td><td>0.60</td>
+					<td class="legend"><span class="legend-color" style="background:#12345699">#99</span></td>
+				</tr>
+				<tr>
+					<td>45%</td><td>8C</td><td>0.55</td>
+					<td class="legend"><span class="legend-color" style="background:#1234568C">#8C</span></td>
+				</tr>
+				<tr>
+					<td>50%</td><td>7F</td><td>0.50</td>
+					<td class="legend"><span class="legend-color" style="background:#1234567F">#7F</span></td>
+				</tr>
+				<tr>
+					<td>55%</td><td>72</td><td>0.45</td>
+					<td class="legend"><span class="legend-color" style="background:#12345672">#72</span></td>
+				</tr>
+				<tr>
+					<td>60%</td><td>66</td><td>0.40</td>
+					<td class="legend"><span class="legend-color" style="background:#12345666">#66</span></td>
+				</tr>
+				<tr>
+					<td>65%</td><td>59</td><td>0.35</td>
+					<td class="legend"><span class="legend-color" style="background:#12345659">#59</span></td>
+				</tr>
+				<tr>
+					<td>70%</td><td>4C</td><td>0.30</td>
+					<td class="legend"><span class="legend-color2" style="background:#1234564C">#4C</span></td>
+				</tr>
+				<tr>
+					<td>75%</td><td>3F</td><td>0.25</td>
+					<td class="legend"><span class="legend-color2" style="background:#1234563F">#3F</span></td>
+				</tr>
+				<tr>
+					<td>80%</td><td>33</td><td>0.20</td>
+					<td class="legend"><span class="legend-color2" style="background:#12345633">#33</span></td>
+				</tr>
+				<tr>
+					<td>85%</td><td>26</td><td>0.15</td>
+					<td class="legend"><span class="legend-color2" style="background:#12345626">#26</span></td>
+				</tr>
+				<tr>
+					<td>90%</td><td>19</td><td>0.10</td>
+					<td class="legend"><span class="legend-color2" style="background:#12345619">#19</span></td>
+				</tr>
+				<tr>
+					<td>95%</td><td>0C</td><td>0.05</td>
+					<td class="legend"><span class="legend-color2" style="background:#1234560C">#0C</span></td>
+				</tr>
+				<tr>
+					<td>100%</td><td>00</td><td>0</td>
+					<td class="legend"><span class="legend-color2" style="background:#12345600">#00</span></td>
+				</tr>
+			</table>		
+		</div>
+	</div>
+	<script>
+		$.get("https://v1.hitokoto.cn/",function(data,status){
+			if (status == 'success'){
+				$('.hitokoto_sign').text(data.hitokoto);
+				$('.hitokoto_sign').attr('href', 'https://hitokoto.cn/?id=' + data.id)
+				$('.hitokoto_from').text(data.from);
+			}else{
+				$('.hitokoto_text').text('获取出错！');
+			}
+		});
+	</script>
+</body>
+</html>
