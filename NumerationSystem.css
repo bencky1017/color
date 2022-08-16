@@ -10,33 +10,40 @@ body{
 	position: absolute;
 	left: 50%;
 	top: 10%;
-	/*transform: translate(-50%,-50%);*/
-	transform: translate(-50%);
+	transform: translate(-50%,-10%);
 }
 .sign-frame{
 	height: auto;
-	width: 500px;
+	width: 80vw;
+	min-width: 300px;
+	max-width: 500px;
 	border: 2px solid #777;
-	color: #fff;
-	-webkit-text-stroke: 0.03em #000;
-	/*background-color: #fff5;*/
+	margin: 0px auto;
 	position: relative;
-	left: 50%;
-	transform: translate(-50%);
 }
 .hitokoto_sign{
-	font-size: 24px;
+	font-size: 22px;
 	text-decoration: none;
 	color: #fff;
 	-webkit-text-stroke: 0.03em #000;
 	font-weight: bolder;
-	/*background-image: url(background.jpg);*/
-	/*background-size: contain;*/
-	/*-webkit-text-fill-color: transparent;*/
-	/*-webkit-background-clip: text;*/
 }
-.hitokoto_from{
-	font-size: 20px;
+.sign_from{
+	font-size: 18px;
+	color: #fff;
+	-webkit-text-stroke: 0.03em #000;
+	position: relative;
+	right: 0px;
+}
+.colortranslate{
+	width: auto;
+	min-width: 300px;
+	height: auto;
+}
+.colortranslate table{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .input-hex,
 .input-dec{
@@ -78,6 +85,51 @@ body{
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
 	cursor: pointer;
+}
+.toolcontrol{
+	width: 500px;
+	height: 50px;
+	margin: 10px 0px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+.buttons{
+	width: 416px;
+	height: 40px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.btn-refresh,
+.btn-hidetable,
+.btn-opacity,
+.btn-full{
+	position: relative;
+	top: 50%;
+	transform: translate(0,-50%);
+	opacity: 0;
+	height: 35px;
+	width: 100px;
+	background-color: #00aaff;
+	border-radius: 20px;
+	font-size: 16px;
+	font-weight: bolder;
+	transition: 0.5s;
+}
+.toolcontrol:hover .btn-refresh,
+.toolcontrol:hover .btn-hidetable,
+.toolcontrol:hover .btn-opacity,
+.toolcontrol:hover .btn-full{
+	opacity: 1;
+	height: 35px;
+	width: 100px;
+	background-color: #00aaff;
+	border-radius: 20px;
+	font-size: 16px;
+	font-weight: bolder;
+	transition: 0.5s;
 }
 .translate-hex2dec,
 .translate-dec2hex{

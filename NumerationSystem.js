@@ -102,7 +102,38 @@ $(function(){
 	});
 });
 $(function(){
-	$('.opacitybtn').click(function(){
-		$(".opacity").slideToggle(200);
+	$('.opacitybtn,.btn-opacity').click(function(){
+		$(".opacity").fadeToggle(200);
+	});
+	$('.btn-hidetable').click(function(){
+		$('.sign-frame,.colortranslate').fadeToggle();
+	});
+	$('.btn-full').click(function(){
+		var exitFullscreen = false// 全屏事件
+		var element = document.documentElement;
+		// if(this.fullscreen) {
+		if(status == 1) {
+			if(document.exitFullscreen) {
+				document.exitFullscreen();
+			} else if(document.webkitCancelFullScreen) {
+				document.webkitCancelFullScreen();
+			} else if(document.mozCancelFullScreen) {
+				document.mozCancelFullScreen();
+			} else if(document.msExitFullscreen) {
+				document.msExitFullscreen();
+			}
+			status = 2;
+		} else {
+			if(element.requestFullscreen) {
+				element.requestFullscreen();
+			} else if(element.webkitRequestFullScreen) {
+				element.webkitRequestFullScreen();
+			} else if(element.mozRequestFullScreen) {
+				element.mozRequestFullScreen();
+			} else if(element.msRequestFullscreen) {
+				element.msRequestFullscreen();
+			}
+			status = 1;
+		}
 	})
-})
+});
